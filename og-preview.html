@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=1200, initial-scale=1">
+  <title>Анна Егорова — факторинг Альфа-Банк</title>
+  <style>
+    * { box-sizing: border-box; }
+    html, body { width: 1200px; height: 630px; margin: 0; overflow: hidden; }
+    body { font-family: Arial, Helvetica, sans-serif; color: #fff; background: #111; }
+    .preview { position: relative; width: 1200px; height: 630px; overflow: hidden; }
+    .photo { position: absolute; inset: 0; background: url("assets/anna-red-dress.webp") 60% 27% / cover no-repeat; transform: scale(1.02); }
+    .shade { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(8,8,8,.94) 0%, rgba(8,8,8,.74) 42%, rgba(8,8,8,.1) 76%), linear-gradient(0deg, rgba(8,8,8,.46), transparent 55%); }
+    .content { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: space-between; padding: 54px 62px 58px; }
+    .brand { display: flex; align-items: center; gap: 15px; font-size: 24px; font-weight: 800; }
+    .mark { position: relative; display: inline-grid; place-items: center; width: 48px; height: 54px; color: #ef3124; font-size: 49px; font-weight: 900; line-height: 1; transform: scaleX(.82); }
+    .mark::after { position: absolute; bottom: 0; width: 35px; height: 5px; content: ""; background: #ef3124; }
+    h1 { max-width: 650px; margin: 0; font-size: 68px; line-height: .98; letter-spacing: -.055em; }
+    .accent { color: #ef3124; }
+  </style>
+</head>
+<body>
+  <main class="preview">
+    <div class="photo"></div>
+    <div class="shade"></div>
+    <div class="content">
+      <div class="brand"><span class="mark">A</span><span>Альфа‑Банк</span></div>
+      <h1>Анна Егорова —<br><span class="accent">факторинг Альфа‑Банк</span></h1>
+    </div>
+  </main>
+</body>
+</html>
