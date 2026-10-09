@@ -41,11 +41,29 @@
         <a class="button button--red" href="tel:+79132511525">Позвонить</a>
         <a class="button button--light" href="https://max.ru/u/f9LHodD0cOJtNS2eCZEGzMK8iuk9tOlMiyOYC4yPLZsbFwd8iVo3FyIz8ho" target="_blank" rel="noopener">Написать в MAX</a>
         <a class="button button--email" href="mailto:aegorova25@alfabank.ru">Отправить письмо</a>
-        <a class="button button--save" href="anna-egorova.vcf" download="Анна-Егорова.vcf">Сохранить контакт</a>
+        <a class="button button--save" id="save-contact" href="anna-egorova.vcf" download="Anna-Egorova.vcf">Сохранить контакт</a>
+        <p class="save-help">Сначала откроется готовая карточка контакта.</p>
       </div>
       <p class="note">Персональная визитка сотрудника. Не является официальным сайтом банка.</p>
     </section>
   </main>
+
+  <dialog class="contact-modal" id="contact-modal" aria-labelledby="contact-modal-title">
+    <button class="modal-close" id="close-contact-modal" type="button" aria-label="Закрыть">×</button>
+    <img class="contact-photo" src="assets/anna-red-dress.webp" alt="Анна Егорова">
+    <div class="contact-preview">
+      <p class="contact-label">Контакт готов к сохранению</p>
+      <h2 id="contact-modal-title">Анна Егорова</h2>
+      <p class="contact-role">Руководитель направления факторинг по Сибири и Дальнему Востоку</p>
+      <dl class="contact-fields">
+        <div><dt>Компания</dt><dd>Альфа‑Банк</dd></div>
+        <div><dt>Телефон</dt><dd>+7 913 251-15-25</dd></div>
+        <div><dt>Почта</dt><dd>aegorova25@alfabank.ru</dd></div>
+      </dl>
+      <button class="modal-save" id="download-contact" type="button">Сохранить в телефон</button>
+      <p class="modal-help" id="modal-help">Телефон попросит подтвердить добавление контакта.</p>
+    </div>
+  </dialog>
 
   <script src="script.js"></script>
 </body>

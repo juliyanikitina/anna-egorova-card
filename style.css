@@ -28,7 +28,24 @@ h1 { max-width: min(760px, 76vw); margin: 0; font-size: clamp(48px, 7vw, 96px); 
 .button--email { grid-column: 1 / -1; background: #111; color: #fff; }
 .button--save { display: flex; grid-column: 1 / -1; align-items: center; justify-content: center; border: 2px solid var(--red); color: var(--red); background: #fff; }
 .button--save::before { content: "+"; display: inline-grid; width: 22px; height: 22px; margin-right: 8px; place-items: center; border-radius: 50%; background: var(--red); color: #fff; font-size: 17px; line-height: 1; }
+.button--save, .modal-close, .modal-save { cursor: pointer; }
+.save-help { grid-column: 1 / -1; margin: 0 4px; color: #777; font-size: 11px; line-height: 1.35; text-align: center; }
 .note { margin: 18px 0 0; color: #777; font-size: 10px; line-height: 1.4; }
+.contact-modal { width: min(440px, calc(100% - 28px)); max-height: calc(100svh - 28px); padding: 0; overflow: auto; border: 0; border-radius: 28px; background: #fff; color: #111; box-shadow: 0 30px 100px rgba(0,0,0,.5); }
+.contact-modal::backdrop { background: rgba(0,0,0,.72); backdrop-filter: blur(7px); }
+.modal-close { position: absolute; z-index: 2; top: 14px; right: 14px; display: grid; width: 38px; height: 38px; place-items: center; border: 0; border-radius: 50%; background: rgba(17,17,17,.72); color: #fff; font-size: 28px; line-height: 1; }
+.contact-photo { display: block; width: 100%; height: 250px; object-fit: cover; object-position: 66% 18%; }
+.contact-preview { padding: 24px; }
+.contact-label { margin: 0 0 8px; color: var(--red); font-size: 11px; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; }
+.contact-preview h2 { margin: 0; font-size: 34px; line-height: 1; letter-spacing: -.045em; }
+.contact-role { margin: 12px 0 18px; font-size: 16px; font-weight: 800; line-height: 1.2; }
+.contact-fields { display: grid; gap: 1px; margin: 0 0 18px; overflow: hidden; border: 1px solid #e8e8e8; border-radius: 16px; background: #e8e8e8; }
+.contact-fields div { padding: 12px 14px; background: #fff; }
+.contact-fields dt { margin-bottom: 3px; color: #777; font-size: 10px; font-weight: 800; text-transform: uppercase; }
+.contact-fields dd { margin: 0; font-size: 14px; font-weight: 800; overflow-wrap: anywhere; }
+.modal-save { width: 100%; min-height: 54px; border: 0; border-radius: 16px; background: var(--red); color: #fff; font: inherit; font-size: 15px; font-weight: 900; box-shadow: 0 12px 26px rgba(239,49,36,.25); }
+.modal-save[aria-busy="true"] { opacity: .65; pointer-events: none; }
+.modal-help { margin: 10px 4px 0; color: #777; font-size: 11px; line-height: 1.35; text-align: center; }
 @keyframes rise { from { opacity: 0; transform: translateY(28px); } }
 
 @media (max-width: 760px) {
@@ -44,7 +61,7 @@ h1 { max-width: min(760px, 76vw); margin: 0; font-size: clamp(48px, 7vw, 96px); 
 
 @media (max-width: 560px) {
   .actions { grid-template-columns: 1fr; }
-  .button--email, .button--save { grid-column: auto; }
+  .button--email, .button--save, .save-help { grid-column: auto; }
 }
 
 @media (prefers-reduced-motion: reduce) {
