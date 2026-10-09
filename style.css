@@ -26,6 +26,8 @@ h1 { max-width: min(760px, 76vw); margin: 0; font-size: clamp(48px, 7vw, 96px); 
 .button--red { background: var(--red); color: #fff; box-shadow: 0 10px 24px rgba(239,49,36,.25); }
 .button--light { border: 1px solid #ddd; color: #111; background: #fff; }
 .button--email { grid-column: 1 / -1; background: #111; color: #fff; }
+.button--save { display: flex; grid-column: 1 / -1; align-items: center; justify-content: center; border: 2px solid var(--red); color: var(--red); background: #fff; }
+.button--save::before { content: "+"; display: inline-grid; width: 22px; height: 22px; margin-right: 8px; place-items: center; border-radius: 50%; background: var(--red); color: #fff; font-size: 17px; line-height: 1; }
 .note { margin: 18px 0 0; color: #777; font-size: 10px; line-height: 1.4; }
 @keyframes rise { from { opacity: 0; transform: translateY(28px); } }
 
@@ -42,7 +44,7 @@ h1 { max-width: min(760px, 76vw); margin: 0; font-size: clamp(48px, 7vw, 96px); 
 
 @media (max-width: 560px) {
   .actions { grid-template-columns: 1fr; }
-  .button--email { grid-column: auto; }
+  .button--email, .button--save { grid-column: auto; }
 }
 
 @media (prefers-reduced-motion: reduce) {
